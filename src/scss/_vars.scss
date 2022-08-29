@@ -1,0 +1,24 @@
+// Container & Breakpoints
+
+$containerWidth: 1160;
+$containerPadding: 80;
+$containerSidePadding: calc($containerPadding / 2);
+$breakpoint1450: 1449.98 + px;
+$breakpoint992: 991.98 +px;
+$breakpoint768: 767.98 +px;
+$breakpoint480: 479.98 +px;
+
+// Colors
+$primary: #1D2736;
+$primaryLight: #677487;
+$secondary: #F0998D;
+$secondaryDark: #FD7461;
+
+// Burger Menu
+$burgerBreakpoint: $breakpoint992;
+$burgerColor: black;
+$burgerActiveColor: white;
+
+// Fonts
+$fontMain: sans-serif;
+$fontSecondary: '';
