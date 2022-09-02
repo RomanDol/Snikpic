@@ -47,7 +47,7 @@ const getTemplate = (data = [], placeholder, selectedId) => {
         <div class="select__backdrop" data-type="backdrop"></div>
         <div class="select__input" data-type="input">
             <span data-type="value">${text}</span>
-            <img src="./img/down-arrow.svg" alt="arrow" class="select__arrow">
+            <img src="./img/down-arrow.svg" alt="arrow" data-type="arrow" class="select__arrow">
         </div>
         <div class="select__dropdown">
             <ul class="select__list">
@@ -79,7 +79,10 @@ class Select {
         this.$el.addEventListener('click', this.clickHandler);
         this.$arrow = this.$el.querySelector('[data-type="arrow"]');
         this.$value = this.$el.querySelector('[data-type="value"]');
+        
+        
     }
+
     clickHandler(event) {
         const { type } = event.target.dataset;
         if (type === 'input') {
@@ -94,7 +97,7 @@ class Select {
 
     get isOpen() {
         return this.$el.classList.contains('open');
-    } // 94
+    }
 
     get current() {
         return this.options.data.find(item => item.id === this.selectedId);
@@ -106,7 +109,7 @@ class Select {
 
         this.$el.querySelectorAll(`[data-type="item"]`).forEach(el => el.classList.remove('selected'));
         this.$el.querySelector(`[data-id="${id}"]`).classList.add('selected');
-
+        
         this.options.onSelect ? this.options.onSelect(this.current) : null;
         this.close();
     }
