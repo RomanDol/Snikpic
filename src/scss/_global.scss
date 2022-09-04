@@ -3,10 +3,13 @@
     max-width: calc($containerWidth + $containerPadding) + px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 $containerSidePadding + px;
 
     @media (max-width: $breakpoint1450) {
         max-width: 1200px;
+    }
+
+    @media (max-width: $breakpoint1200) {
+        padding: 0 $containerSidePadding + px;
     }
 
     @media (max-width: $breakpoint992) {
@@ -50,6 +53,38 @@ body {
             background: $secondary;
             color: #ffffff;
         }
+    }
+}
+
+.btn {
+    background: #F0998D;
+    box-shadow: 0px 16px 40px rgba(255, 188, 166, 0.33);
+    border-radius: 15px;
+    padding: 16px 38px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    transition: background .3s;
+
+    @media (max-width: $breakpoint1200) {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        padding: 6px 22px;
+        font-size: 14px;
+    }
+
+        @media (max-width: $breakpoint480) {
+            flex-shrink: 0;
+        }
+
+    &:hover {
+        background: $secondaryDark;
+        color: #ffffff;
     }
 }
 
