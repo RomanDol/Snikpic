@@ -1,0 +1,182 @@
+.section__tabs {
+    background: #FDF9F8;
+    padding-top: 100px;
+    padding-bottom: 140px;
+    margin-top: 140px;
+
+    @media (max-width: $breakpoint992) {
+        padding: 50px 0;
+        margin-top: 50px;
+    }
+}
+
+.tabs {
+    width: 100%;
+    // margin-top: 150px;
+
+    &__header {
+
+        display: flex;
+        gap: 48px;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        &-item {
+
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 180%;
+            color: $primary;
+            position: relative;
+
+            @media (max-width: $breakpoint992) {
+                font-size: 18px;
+            }
+
+            &.active {
+                &:after {
+                    position: absolute;
+                    content: '';
+                    height: 3px;
+                    width: 100%;
+                    background: $secondary;
+                    left: 0;
+                    bottom: -8px;
+                }
+            }
+        }
+    }
+
+    &__content {
+        &-item {
+            animation: fade .5s linear;
+        }
+    }
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 74px;
+
+    @media (max-width: $breakpoint992) {
+        margin-top: 34px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    // .tab__item
+    &__item {
+        flex: 0 1 48%;
+
+        @media (max-width: $breakpoint768) {
+            flex: 0 1 100%;
+        }
+
+        &.left__item {
+            flex: 0 1 380px;
+        }
+
+        @media (max-width: $breakpoint1200) {
+            .tab__img {
+                max-width: 550px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    // .tab__title
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 110%;
+        letter-spacing: -0.03em;
+        color: $primary;
+
+        @media (max-width: $breakpoint1200) {
+            font-size: 36px;
+        }
+
+        @media (max-width: $breakpoint992) {
+            font-size: 28px;
+        }
+
+        span {
+            color: $secondary;
+        }
+    }
+
+    // .tab__text
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 180%;
+        color: $primaryLight;
+        margin-top: 24px;
+
+        @media (max-width: $breakpoint992) {
+            margin-top: 12px;
+            font-size: 16px;
+            line-height: 130%;
+        }
+    }
+
+    // .tab__subtitle
+    &__subtitle {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 180%;
+        letter-spacing: 0.2em;
+        margin-top: 32px;
+        color: $primaryLight;
+
+        @media (max-width: $breakpoint768) {
+            margin-top: 24px;
+        }
+    }
+
+    // .tab__tegs
+    &__tegs {
+        display: flex;
+        gap: 16px;
+        margin-top: 8px;
+
+        @media (max-width: $breakpoint768) {
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+    }
+
+    // .tab__teg
+    &__teg {
+        padding-right: 16px;
+
+        @media (max-width: $breakpoint768) {
+            padding-right: 8px;
+        }
+
+        &:not(&:last-child) {
+            border-right: 1px solid rgba(29, 39, 54, .1);
+        }
+    }
+
+    // .tab__btn
+    &__btn {
+        display: inline-block;
+        margin-top: 40px;
+    }
+}

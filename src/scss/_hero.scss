@@ -30,7 +30,7 @@
         &.left__item {
             flex: 0 1 412px;
 
-            @media (max-width: $breakpoint1200) {
+            @media (max-width: $breakpoint1450) {
                 flex: 0 1 48%;
             }
 
@@ -43,7 +43,7 @@
             display: flex;
             justify-content: center;
 
-            @media (max-width: $breakpoint1200) {
+            @media (max-width: $breakpoint1450) {
                 flex: 0 1 48%;
             }
 
@@ -57,6 +57,10 @@
             max-width: 100%;
             width: 100%;
             height: auto;
+
+            @media (max-width: $breakpoint1450) {
+                max-width: 600px;
+            }
 
             @media (max-width: $breakpoint1200) {
                 max-width: 450px;
