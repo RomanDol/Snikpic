@@ -67,6 +67,7 @@ body {
     line-height: 27px;
     color: #FFFFFF;
     transition: background .3s;
+    display: inline-block;
 
     @media (max-width: $breakpoint1200) {
         padding: 10px 30px;
