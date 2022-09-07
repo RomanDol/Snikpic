@@ -208,3 +208,34 @@ tabs('.tabs__header',
     '.tabs__content-item',
     'active');
 // =============================================================
+
+
+
+// ======================== Slider =============================
+import Swiper, { Navigation } from 'swiper';
+Swiper.use([Navigation]);
+
+const swiper = new Swiper('.swiper', {
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.next__btn',
+        prevEl: '.prev__btn',
+    },
+
+    // // Responcive breakpoints
+    // breakpoints: {
+    // // when window width is >= 320px
+    // 320: { 
+    //  slidesPerView: 3,
+    //  spaceBetween: 20
+    // },
+    // // when window width is >= 480px
+    // 480: { 
+    //  slidesPerView: 3,
+    //  spaceBetween: 30
+    // },
+    //}
+
+});
+// =============================================================

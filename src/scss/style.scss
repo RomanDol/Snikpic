@@ -9,7 +9,9 @@
 @import "./_tabs.scss";
 @import "./_selling.scss";
 @import "./_price.scss";
+@import "./_reviews.scss";
 // @import "./_footer.scss";
 
 // LIbs
-//@import "./libs/swiper.scss";
+@import "../../node_modules/swiper/swiper";
+// @import '../../node_modules/swiper/modules/navigation/navigation';
