@@ -198,11 +198,6 @@ function tabs(headerSelector,
     });
 }
 
-// 1-й аргумунт - класс всего нашего хедера табов
-// 2-й аргумунт - класс конкретного элемента, при клике на который будет переключаться таб
-// 3-й аргумунт - класс того блока, который будет переключаться
-// 4-й аргумунт - классактивности, который будет добавляться для таба, который сейчас активен
-
 tabs('.tabs__header',
     '.tabs__header-item',
     '.tabs__content-item',
@@ -216,26 +211,9 @@ import Swiper, { Navigation } from 'swiper';
 Swiper.use([Navigation]);
 
 const swiper = new Swiper('.swiper', {
-
-    // Navigation arrows
     navigation: {
         nextEl: '.next__btn',
         prevEl: '.prev__btn',
     },
-
-    // // Responcive breakpoints
-    // breakpoints: {
-    // // when window width is >= 320px
-    // 320: { 
-    //  slidesPerView: 3,
-    //  spaceBetween: 20
-    // },
-    // // when window width is >= 480px
-    // 480: { 
-    //  slidesPerView: 3,
-    //  spaceBetween: 30
-    // },
-    //}
-
 });
 // =============================================================
